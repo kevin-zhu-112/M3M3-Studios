@@ -32,6 +32,18 @@ public class EnemySquishScript : MonoBehaviour
             {
                 // Receive dmg
             }
-        } 
+        }
+        if (collision.transform.gameObject.tag == "Boss")
+        {
+            if (collision.collider.GetType() == typeof(BoxCollider))
+            {
+                Debug.Log("Hit");
+                collision.transform.gameObject.GetComponent<ShoeAIScript>().DealDmg();
+            }
+            else
+            {
+                // Receive dmg
+            }
+        }
     }
 }
