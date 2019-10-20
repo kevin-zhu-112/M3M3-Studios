@@ -13,6 +13,8 @@ public class ButtonTest : MonoBehaviour
 
         controls.Gameplay.Test.performed += ctx => test();
         Debug.Log("HELLO?");   
+
+        controls.Gameplay.Move.performed += ctx => Debug.Log(ctx.ReadValue<Vector2>());
     }
 
     void test() {

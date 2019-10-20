@@ -36,23 +36,35 @@ public class CustomCharacterControl : MonoBehaviour {
     private List<Collider> m_collisions = new List<Collider>();
 
 
-    // //MY STUFF
-    // PlayerControls controls;
+    //MY STUFF
+    PlayerControls controls;
 
-    // Vector2 move;
+    private Vector2 moveVector;
+    private bool jump = false;
 
-    // void Awake() {
-    //     controls = new PlayerControls();
+    void Awake() {
+        controls = new PlayerControls();
 
-    //     controls.Gameplay.Move.performed += ctx => Debug.Log("REREREE");
-    //     // controls.Gameplay.Move.canceled += ctx => move = Vector2.zero;
+        controls.Gameplay.Move.performed += ctx => moveVector = ctx.ReadValue<Vector2>();
+        controls.Gameplay.Move.canceled += ctx => moveVector = Vector2.zero;
 
-    //     controls.Gameplay.Test.performed += ctx => test();
-    // }
+        controls.Gameplay.Jump.performed += ctx => jump = true;
+        controls.Gameplay.Jump.canceled += ctx => jump = false;
 
-    // private void test() {
-    //     Debug.Log("pressed A");
-    // }
+        controls.Gameplay.Test.performed += ctx => test();
+    }
+
+    public void OnEnable() {
+        controls.Enable();
+    }
+
+    public void OnDisable() {
+        controls.Disable();
+    }
+
+    private void test() {
+        Debug.Log(jump);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -156,11 +168,11 @@ public class CustomCharacterControl : MonoBehaviour {
 
     private void DirectUpdate()
     {
-        float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
+        // float v = Input.GetAxis("Vertical");
+        // float h = Input.GetAxis("Horizontal");
 
-        // float v = move.x;
-        // float h = move.y;
+        float h = moveVector.x;
+        float v = moveVector.y;
 
         Transform camera = Camera.main.transform;
 
@@ -196,7 +208,8 @@ public class CustomCharacterControl : MonoBehaviour {
     {
         bool jumpCooldownOver = (Time.time - m_jumpTimeStamp) >= m_minJumpInterval;
 
-        if (jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Space))
+
+        if (jumpCooldownOver && m_isGrounded && jump) //Input.GetKey(KeyCode.Space))
         {
             m_jumpTimeStamp = Time.time;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
