@@ -705,6 +705,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3639509524102332711, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
+        type: 3}
+      propertyPath: m_controlMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3639509524102332711, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
+        type: 3}
+      propertyPath: m_animator
+      value: 
+      objectReference: {fileID: 1811279373}
+    - target: {fileID: 3639509524102332711, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
+        type: 3}
+      propertyPath: m_rigidBody
+      value: 
+      objectReference: {fileID: 1811279375}
+    - target: {fileID: 3639509524102332711, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
+        type: 3}
+      propertyPath: m_jumpForce
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7380674168671129034, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f, type: 3}
@@ -1225,11 +1245,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3997835614403952241, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
-        type: 3}
-      propertyPath: m_Text
-      value: You Win!
-      objectReference: {fileID: 0}
     - target: {fileID: 3997835613409815120, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1240,15 +1255,20 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: ShoeBoss
       objectReference: {fileID: 0}
-    - target: {fileID: 3997835613301892685, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
-        type: 3}
-      propertyPath: m_Text
-      value: Main Menu
-      objectReference: {fileID: 0}
     - target: {fileID: 3997835614688066104, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997835614403952241, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
+        type: 3}
+      propertyPath: m_Text
+      value: You Win!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997835613301892685, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
+        type: 3}
+      propertyPath: m_Text
+      value: Main Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9, type: 3}
@@ -1559,24 +1579,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 616015333}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1811279372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811279371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c23284b1867dac41be747a009661782, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_moveSpeed: 2
-  m_turnSpeed: 200
-  m_jumpForce: 10
-  m_animator: {fileID: 1811279373}
-  m_rigidBody: {fileID: 1811279375}
-  m_controlMode: 0
 --- !u!95 &1811279373 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7396643347679254878, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,

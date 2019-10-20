@@ -36,4 +36,9 @@ public class LevelSelect : MonoBehaviour
     {
         SceneManager.LoadScene("Demo");
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
