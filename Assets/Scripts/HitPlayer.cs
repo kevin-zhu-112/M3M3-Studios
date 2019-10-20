@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonScript : MonoBehaviour
+public class HitPlayer : MonoBehaviour
 {
-    private Animator m_Animator;
-    private AudioSource m_Audio;
-    public GameObject target;
     // Start is called before the first frame update
     void Start()
     {
-        m_Animator = target.GetComponent<Animator>();
-        m_Audio = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -24,8 +20,7 @@ public class ButtonScript : MonoBehaviour
     {
         if (collision.transform.gameObject.tag == "Player")
         {
-            m_Animator.SetTrigger("Move");
-            m_Audio.Play(0);
+            collision.transform.gameObject.GetComponent<Rigidbody>().AddForce(40000 * transform.forward);
         }
     }
 }
