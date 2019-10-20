@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test Level.unity
+    path: Assets/Scenes/Level 0.unity
     guid: 83240b1fbfa8d134a973988c90dc7612
   - enabled: 1
-    path: Assets/Scenes/AI Test.unity
+    path: Assets/Scenes/ShoeBoss.unity
     guid: 9ceeccc6d9ff962409f0462089023411
   m_configObjects: {}

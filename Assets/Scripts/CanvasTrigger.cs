@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitPlayer : MonoBehaviour
+public class CanvasTrigger : MonoBehaviour
 {
+    public Canvas canvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +17,12 @@ public class HitPlayer : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.transform.gameObject.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
-            collision.transform.gameObject.GetComponent<Rigidbody>().AddForce(40000 * transform.forward);
+            canvas.transform.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }
