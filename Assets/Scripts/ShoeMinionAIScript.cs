@@ -13,6 +13,7 @@ public class ShoeMinionAIScript : MonoBehaviour
     public ShoeState state;
     public GameObject player;
     public int speed;
+    public int turnSpeed;
     public int strength;
 
     AudioSource damnDaniel;
@@ -46,8 +47,8 @@ public class ShoeMinionAIScript : MonoBehaviour
 
             case ShoeState.Chase:
                 // Smoothly rotate towards the target point.
-                var targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+                var targetRotation = Quaternion.LookRotation(new Vector3(player.transform.position.x, gameObject.transform.position.y, player.transform.position.z) - transform.position); // we use gameObject's y value so that the shoe doesnt look up when the player jumps
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
                 // move towards player
                 transform.position += transform.forward * speed * Time.deltaTime;
                 break;
