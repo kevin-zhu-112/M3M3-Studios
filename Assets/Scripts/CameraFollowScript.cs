@@ -44,8 +44,8 @@ public class CameraFollowScript : MonoBehaviour
         finalInputX = mouseX;
         finalInputZ = mouseY;
 
-        rotX += finalInputX + InputSensitivity * Time.deltaTime;
-        rotY += finalInputZ + InputSensitivity * Time.deltaTime;
+        rotY += finalInputX * InputSensitivity * Time.deltaTime;
+        rotX += finalInputZ * InputSensitivity * Time.deltaTime;
 
         rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
 
