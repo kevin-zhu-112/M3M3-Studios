@@ -3023,27 +3023,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1573434813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c23284b1867dac41be747a009661782, type: 3}
+  m_Script: {fileID: 11500000, guid: 32ca30c36b506c64aafa127f12f968fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 2
   m_turnSpeed: 200
-  m_jumpForce: 10
-  m_animator: {fileID: 1573434815}
-  m_rigidBody: {fileID: 1573434817}
-  m_controlMode: 0
---- !u!95 &1573434815 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7396643347679254878, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
-    type: 3}
-  m_PrefabInstance: {fileID: 7490974227590695793}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1573434817 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 7437431246396817402, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
-    type: 3}
-  m_PrefabInstance: {fileID: 7490974227590695793}
-  m_PrefabAsset: {fileID: 0}
+  m_jumpForce: 4
+  m_animator: {fileID: 0}
+  m_rigidBody: {fileID: 0}
+  m_controlMode: 1
 --- !u!1 &1638569292
 GameObject:
   m_ObjectHideFlags: 0

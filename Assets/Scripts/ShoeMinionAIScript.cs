@@ -12,7 +12,7 @@ public class ShoeMinionAIScript : MonoBehaviour
 
     public ShoeState state;
     public GameObject player;
-    public int speed;
+    public float speed;
     public int turnSpeed;
     public int strength;
 

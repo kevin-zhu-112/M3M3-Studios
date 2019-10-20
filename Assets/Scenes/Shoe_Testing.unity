@@ -377,7 +377,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1e-45, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 3.0092666e-36, y: 1.009742e-28, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -620,6 +620,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7536826360568495170, guid: 538ff081685af46ac9fddfd8189b621d,
+        type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538ff081685af46ac9fddfd8189b621d, type: 3}
 --- !u!1001 &7536826361538145660
@@ -694,5 +699,15 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 207352527}
+    - target: {fileID: 7536826360568495170, guid: 538ff081685af46ac9fddfd8189b621d,
+        type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536826360568495165, guid: 538ff081685af46ac9fddfd8189b621d,
+        type: 3}
+      propertyPath: Pan2D
+      value: 0.11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538ff081685af46ac9fddfd8189b621d, type: 3}
