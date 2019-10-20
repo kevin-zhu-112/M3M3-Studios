@@ -12,12 +12,23 @@ public class ButtonTest : MonoBehaviour
         controls = new PlayerControls();
 
         controls.Gameplay.Test.performed += ctx => test();
-        // Debug.Log("HELLO?");   
+        Debug.Log("HELLO?");   
     }
 
     void test() {
         Debug.Log("Pressed U");
     }
+
+      public void OnEnable()
+    {
+        controls.Enable();
+    }
+
+    public void OnDisable()
+    {
+        controls.Disable();
+    }
+
     // Update is called once per frame
     void Update()
     {
