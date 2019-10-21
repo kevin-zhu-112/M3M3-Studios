@@ -49,6 +49,14 @@ public class PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""9b2585a7-a81e-43d6-b82d-8623442858fe"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Tap""
                 }
             ],
             ""bindings"": [
@@ -216,6 +224,28 @@ public class PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Camera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7d86599f-053d-408e-957d-8dab8d6d6bda"",
+                    ""path"": ""<SwitchProControllerHID>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""53f48594-4f5a-4c73-88c9-49b88384f1b7"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -228,6 +258,7 @@ public class PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_Test = m_Gameplay.FindAction("Test", throwIfNotFound: true);
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
         m_Gameplay_Camera = m_Gameplay.FindAction("Camera", throwIfNotFound: true);
+        m_Gameplay_Menu = m_Gameplay.FindAction("Menu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -281,6 +312,7 @@ public class PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Test;
     private readonly InputAction m_Gameplay_Jump;
     private readonly InputAction m_Gameplay_Camera;
+    private readonly InputAction m_Gameplay_Menu;
     public struct GameplayActions
     {
         private PlayerControls m_Wrapper;
@@ -289,6 +321,7 @@ public class PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Test => m_Wrapper.m_Gameplay_Test;
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @Camera => m_Wrapper.m_Gameplay_Camera;
+        public InputAction @Menu => m_Wrapper.m_Gameplay_Menu;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -310,6 +343,9 @@ public class PlayerControls : IInputActionCollection, IDisposable
                 Camera.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnCamera;
                 Camera.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnCamera;
                 Camera.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnCamera;
+                Menu.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMenu;
+                Menu.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMenu;
+                Menu.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMenu;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -326,6 +362,9 @@ public class PlayerControls : IInputActionCollection, IDisposable
                 Camera.started += instance.OnCamera;
                 Camera.performed += instance.OnCamera;
                 Camera.canceled += instance.OnCamera;
+                Menu.started += instance.OnMenu;
+                Menu.performed += instance.OnMenu;
+                Menu.canceled += instance.OnMenu;
             }
         }
     }
@@ -336,5 +375,6 @@ public class PlayerControls : IInputActionCollection, IDisposable
         void OnTest(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnCamera(InputAction.CallbackContext context);
+        void OnMenu(InputAction.CallbackContext context);
     }
 }

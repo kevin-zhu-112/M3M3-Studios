@@ -2784,6 +2784,11 @@ PrefabInstance:
       propertyPath: CameraFollowObj
       value: 
       objectReference: {fileID: 830744310}
+    - target: {fileID: 6204598236665155320, guid: 976595d6df0044f46ba17e4a4be05a79,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 976595d6df0044f46ba17e4a4be05a79, type: 3}
 --- !u!1 &1244247724
