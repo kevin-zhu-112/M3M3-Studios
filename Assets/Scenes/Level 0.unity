@@ -684,7 +684,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1573434813}
+      objectReference: {fileID: 1078020165}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538ff081685af46ac9fddfd8189b621d, type: 3}
 --- !u!1 &202085198
@@ -2371,6 +2371,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032697015}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1078020165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5596209267737894083, guid: c2dc42904993a57468155db7b9da261c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1432780294}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1193726545
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,12 +3173,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558408684}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1573434813 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7490137640781336226, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
-    type: 3}
-  m_PrefabInstance: {fileID: 7490974227590695793}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1573434815 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7396643347679254878, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
