@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShoeMinionAIScript : MonoBehaviour
 {
+    public AudioSource hurt;
+
     public enum ShoeState
     {
         Idle,
@@ -64,6 +66,7 @@ public class ShoeMinionAIScript : MonoBehaviour
         {
             if (player.transform.position.y >= gameObject.transform.position.y)
             {
+                hurt.Play();
                 Destroy(gameObject);
             }
             else
