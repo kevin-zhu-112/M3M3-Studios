@@ -50,8 +50,8 @@ public class CameraFollowScript : MonoBehaviour
         Vector3 rot = transform.localRotation.eulerAngles;
         rotY = rot.y;
         rotX = rot.x;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -59,8 +59,8 @@ public class CameraFollowScript : MonoBehaviour
     {
         float inputX = cameraVector.x;
         float inputZ = -cameraVector.y;
-        mouseX = Input.GetAxis("Mouse X");
-        mouseY = Input.GetAxis("Mouse Y");
+        // mouseX = Input.GetAxis("Mouse X");
+        // mouseY = Input.GetAxis("Mouse Y");
         finalInputX = mouseX + inputX;
         finalInputZ = mouseY + inputZ;
 
