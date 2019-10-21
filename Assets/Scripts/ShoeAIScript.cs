@@ -40,12 +40,12 @@ public class ShoeAIScript : MonoBehaviour
                 break;
             case ShoeState.Chase:
                 targetRotation = Quaternion.LookRotation(new Vector3(player.transform.position.x, 0, player.transform.position.z) - transform.position);
-                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.2f);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.05f);
                 transform.position += transform.forward * moveSpeed * Time.deltaTime;
                 break;
             case ShoeState.Hurt:
                 targetRotation = Quaternion.LookRotation(transform.position - new Vector3(player.transform.position.x, 0, player.transform.position.z));
-                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.2f);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.05f);
                 transform.position += transform.forward * moveSpeed * 3 * Time.deltaTime;
                 fleeTime -= Time.deltaTime;
                 if (fleeTime <= 0.0f)
