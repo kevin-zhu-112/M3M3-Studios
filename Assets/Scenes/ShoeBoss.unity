@@ -328,6 +328,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2317456985657425882, guid: 16831edff927d504da84c9ce56910ec0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: ShoeBoss
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16831edff927d504da84c9ce56910ec0, type: 3}
 --- !u!223 &312155761 stripped
