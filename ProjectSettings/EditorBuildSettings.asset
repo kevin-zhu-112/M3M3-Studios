@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShoeBoss.unity
     guid: 9ceeccc6d9ff962409f0462089023411
+  - enabled: 1
+    path: Assets/Scenes/GameMenu.unity
+    guid: e1a9d38b82cf54b2e851ecd689399bfb
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: c0f3dc9c9c32e4bb6982fb0e26c3d8a5
   m_configObjects: {}
