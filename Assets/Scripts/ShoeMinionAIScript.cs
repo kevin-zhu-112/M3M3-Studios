@@ -11,7 +11,7 @@ public class ShoeMinionAIScript : MonoBehaviour
     }
 
     public ShoeState state;
-    public GameObject player;
+    GameObject player;
     public float speed;
     public int turnSpeed;
     public int strength;
@@ -23,7 +23,7 @@ public class ShoeMinionAIScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
         state = ShoeState.Idle;
         damnDaniel = GetComponent<AudioSource>();
     }
