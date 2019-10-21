@@ -939,11 +939,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 3997835614321908211, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3997835614321908223, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1048,16 +1043,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997835613409815120, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: ShoeBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997835614688066104, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9, type: 3}
@@ -1500,6 +1485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997835614321908221, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3997835613409815126, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
         type: 3}
