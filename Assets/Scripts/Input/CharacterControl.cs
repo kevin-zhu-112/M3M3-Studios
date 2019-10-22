@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class CharacterControl : MonoBehaviour
 {
-
+    // DO NOT USE THIS FILE, IT IS OUTDATED. USE CUSTOMCHARACTERCONTROL INSTEAD
     private enum ControlMode
     {
         Tank,
