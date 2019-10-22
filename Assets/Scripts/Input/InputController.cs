@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
+    //DONT USE THIS SCRIPT, IT IS OUTDATED. USE CUSTOMCHARACTERCONTROL INSTEAD
 
     private float filteredForwardInput = 0f;
     private float filteredTurnInput = 0f;
