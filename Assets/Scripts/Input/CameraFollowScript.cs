@@ -84,7 +84,7 @@ public class CameraFollowScript : MonoBehaviour
         //target.position = target.position + new Vector3(camDistanceXToPlayer, camDistanceYToPlayer, camDistanceZToPlayer);
 
         float step = CameraMoveSpeed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        transform.position = Vector3.MoveTowards(transform.position, target.position - new Vector3(camDistanceXToPlayer, camDistanceYToPlayer, camDistanceZToPlayer), step);
         //transform.LookAt(target.position);
     }
 }

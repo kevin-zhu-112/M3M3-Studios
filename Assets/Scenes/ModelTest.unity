@@ -602,14 +602,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6204598236665155320, guid: 976595d6df0044f46ba17e4a4be05a79,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1665853911}
     - target: {fileID: 6204598236665155321, guid: 976595d6df0044f46ba17e4a4be05a79,
         type: 3}
       propertyPath: CameraFollowObj
+      value: 
+      objectReference: {fileID: 1665853911}
+    - target: {fileID: 6204598236665155320, guid: 976595d6df0044f46ba17e4a4be05a79,
+        type: 3}
+      propertyPath: player
       value: 
       objectReference: {fileID: 1665853911}
     - target: {fileID: 6204598238185152642, guid: 976595d6df0044f46ba17e4a4be05a79,
