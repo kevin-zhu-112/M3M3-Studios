@@ -26,6 +26,8 @@ Our game includes AI that will attempt to attack the player and try to knock the
 Polish:
 Our game contains a start menu and pause menu. We also have different sound effects for certain actions and activities.
 
+The notable scenes in the game are GameMenu, Level 0, and ShoeBoss, where all of the gameplay happens. Other scenes in the project are used for testing. To start playing the game, hit play in the GameMenu scene. The main algorithm-heavy scripts are the Camera scripts, CharacterControl, CustomCharacter, InputController, ShoeAIScript, and ShoeMinionAIScript, while other scripts create scaffolding for level sequence and more simple interactions between the player and the world.
+
 
 Attributions:
 Player Model and Animations - https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870
