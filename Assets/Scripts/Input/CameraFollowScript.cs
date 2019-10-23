@@ -30,7 +30,7 @@ public class CameraFollowScript : MonoBehaviour
     private Vector2 cameraVector;
 
     void Awake() {
-         controls = new PlayerControls();
+        controls = new PlayerControls();
 
         controls.Gameplay.Camera.performed += ctx => cameraVector = ctx.ReadValue<Vector2>();
         controls.Gameplay.Camera.canceled += ctx => cameraVector = Vector2.zero;
@@ -84,7 +84,7 @@ public class CameraFollowScript : MonoBehaviour
         //target.position = target.position + new Vector3(camDistanceXToPlayer, camDistanceYToPlayer, camDistanceZToPlayer);
 
         float step = CameraMoveSpeed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position - new Vector3(camDistanceXToPlayer, camDistanceYToPlayer, camDistanceZToPlayer), step);
+        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         //transform.LookAt(target.position);
     }
 }

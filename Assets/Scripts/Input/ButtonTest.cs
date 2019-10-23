@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -21,13 +21,11 @@ public class ButtonTest : MonoBehaviour
         Debug.Log("Pressed U");
     }
 
-      public void OnEnable()
-    {
+    public void OnEnable() {
         controls.Enable();
     }
 
-    public void OnDisable()
-    {
+    public void OnDisable() {
         controls.Disable();
     }
 
