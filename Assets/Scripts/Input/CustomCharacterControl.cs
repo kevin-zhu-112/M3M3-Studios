@@ -31,6 +31,7 @@ public class CustomCharacterControl : MonoBehaviour {
 
     private float m_jumpTimeStamp = 0;
     private float m_minJumpInterval = 0.25f;
+    public bool m_doubleJump = true;
 
     private bool m_isGrounded;
     private List<Collider> m_collisions = new List<Collider>();
@@ -216,9 +217,19 @@ public class CustomCharacterControl : MonoBehaviour {
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
         }
 
+        if (jump && !m_isGrounded && m_doubleJump && jumpCooldownOver)
+        {
+            m_jumpTimeStamp = Time.time;
+            m_doubleJump = false;
+            m_animator.SetTrigger("Jump");
+            m_rigidBody.velocity = new Vector3(m_rigidBody.velocity.x, 0.0f, m_rigidBody.velocity.z);
+            m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
+        }
+
         if (!m_wasGrounded && m_isGrounded)
         {
             m_animator.SetTrigger("Land");
+            m_doubleJump = true;
         }
 
         if (!m_isGrounded && m_wasGrounded)
