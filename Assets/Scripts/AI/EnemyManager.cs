@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public Canvas victoryScreen;
+    public GameObject powerUp;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +15,13 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("ShoeBoss") == null)
-        {
-            victoryScreen.transform.gameObject.SetActive(true);
-            Time.timeScale = 0f;
+        if (GameObject.Find("ShoeBoss") == null) {
+            ShowPowerUp();
         }
+    }
+
+    
+    void ShowPowerUp() {
+        powerUp.SetActive(true);
     }
 }

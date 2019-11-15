@@ -43,6 +43,8 @@ public class CustomCharacterControl : MonoBehaviour {
     private Vector2 moveVector;
     private bool jump = false;
 
+    private PowerUpCollector mc = new PowerUpCollector();
+
     void Awake() {
         controls = new PlayerControls();
 
@@ -212,7 +214,7 @@ public class CustomCharacterControl : MonoBehaviour {
 
 
         if (jumpCooldownOver && m_isGrounded && jump) //Input.GetKey(KeyCode.Space))
-        {
+        {  
             m_jumpTimeStamp = Time.time;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
         }
