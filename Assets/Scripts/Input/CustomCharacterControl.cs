@@ -33,7 +33,7 @@ public class CustomCharacterControl : MonoBehaviour {
     private float m_minJumpInterval = 0.25f;
     public bool m_doubleJump = true;
 
-    private bool m_isGrounded;
+    public bool m_isGrounded;
     private List<Collider> m_collisions = new List<Collider>();
 
 
@@ -75,7 +75,7 @@ public class CustomCharacterControl : MonoBehaviour {
             if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f)
             {
                 // Prevent infinite jump bug if you kill an enemy
-                if (!m_collisions.Contains(collision.collider) && collision.transform.gameObject.tag != "Enemy") {
+                if (!m_collisions.Contains(collision.collider) && (collision.transform.gameObject.tag != "Enemy" || collision.transform.gameObject.tag != "Boss")) {
                     m_collisions.Add(collision.collider);
                 }
                 m_isGrounded = true;
