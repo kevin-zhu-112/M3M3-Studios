@@ -1626,7 +1626,7 @@ GameObject:
   - component: {fileID: 1134294292}
   - component: {fileID: 1134294293}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: NextLevelPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2589,6 +2589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUp: {fileID: 547578911}
+  platform: {fileID: 1134294291}
 --- !u!1 &2147082704
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,7 +2655,7 @@ MonoBehaviour:
   player: {fileID: 1139302429}
   fleeTime: 5
   moveSpeed: 2
-  health: 1
+  health: 3
 --- !u!82 &2147082708
 AudioSource:
   m_ObjectHideFlags: 0

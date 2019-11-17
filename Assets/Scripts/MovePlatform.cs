@@ -16,7 +16,7 @@ public class MovePlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Slerp(transform.position, finalPos, 0.03f);//Vector3.Lerp(startMarker.position, endMarker.position, fractionOfJourney);
+        transform.position = Vector3.Slerp(transform.position, finalPos, 0.02f);//Vector3.Lerp(startMarker.position, endMarker.position, fractionOfJourney);
     }
     
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public GameObject powerUp;
+    public GameObject platform;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,6 @@ public class EnemyManager : MonoBehaviour
     
     void ShowPowerUp() {
         powerUp.SetActive(true);
+        platform.SetActive(true);
     }
 }
