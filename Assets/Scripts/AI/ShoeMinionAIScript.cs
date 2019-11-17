@@ -60,23 +60,23 @@ public class ShoeMinionAIScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            if (player.transform.position.y >= gameObject.transform.position.y)
-            {
-                hurt.Play();
-                Destroy(gameObject);
-            }
-            else
-            {
-                //TODO: hurt player
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        if (player.transform.position.y >= gameObject.transform.position.y)
+    //        {
+    //            hurt.Play();
+    //            Destroy(gameObject);
+    //        }
+    //        else
+    //        {
+    //            //TODO: hurt player
 
-                damnDaniel.Play();
-                // Push player back
-                player.GetComponent<Rigidbody>().AddForce(strength * transform.forward);
-            }
-        }
-    }
+    //            damnDaniel.Play();
+    //            // Push player back
+    //            player.GetComponent<Rigidbody>().AddForce(strength * transform.forward);
+    //        }
+    //    }
+    //}
 }
