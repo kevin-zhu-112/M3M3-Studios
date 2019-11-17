@@ -5,10 +5,12 @@ using UnityEngine;
 public class EnemySquishScript : MonoBehaviour
 {
     private GameObject upgradeManager;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         upgradeManager = GameObject.Find("UpgradeManager");
     }
 
@@ -22,27 +24,29 @@ public class EnemySquishScript : MonoBehaviour
     {
         if (collision.transform.gameObject.tag == "Enemy")
         {
-            if (collision.collider.GetType() == typeof(SphereCollider))
+            Debug.Log(rb.velocity.y);
+            if (gameObject.transform.position.y >= collision.transform.gameObject.transform.position.y)
             {
-                Debug.Log("Hit");
+                
                 Destroy(collision.transform.gameObject);
-                upgradeManager.GetComponent<UpgradeController>().GainDoubleJump();
+                rb.AddForce(transform.up * 500);
             }
             else
             {
-                // Receive dmg
+                rb.AddForce(transform.forward * -400 + transform.up * 400);
             }
         }
         if (collision.transform.gameObject.tag == "Boss")
         {
-            if (collision.collider.GetType() == typeof(BoxCollider))
+            if (rb.velocity.y < -0.5)
             {
                 Debug.Log("Hit");
                 collision.transform.gameObject.GetComponent<ShoeAIScript>().DealDmg();
+                rb.AddForce(transform.up * 500);
             }
             else
             {
-                // Receive dmg
+                rb.AddForce(transform.forward * -500 + transform.up * 500);
             }
         }
     }
