@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.41568628, g: 0.45490196, b: 0.5254902, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 484f23bccef969a4d9ca1efd9610a9e9, type: 2}
   m_HaloStrength: 0.5
@@ -1871,7 +1871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &562754939
 Transform:
   m_ObjectHideFlags: 0
@@ -4062,16 +4062,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6843875100020373750, guid: c2dc42904993a57468155db7b9da261c,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1078020165}
     - target: {fileID: 5596209267737894083, guid: c2dc42904993a57468155db7b9da261c,
         type: 3}
       propertyPath: m_Name
       value: MainCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6843875100020373750, guid: c2dc42904993a57468155db7b9da261c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1078020165}
     - target: {fileID: 5601945386845003193, guid: c2dc42904993a57468155db7b9da261c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4705,6 +4705,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spot Light
       objectReference: {fileID: 0}
+    - target: {fileID: 1246858690381585218, guid: c166e8f7a56ca484cb3d6c24fc4debc8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1246858690381585216, guid: c166e8f7a56ca484cb3d6c24fc4debc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5319,7 +5324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2006380511
 Transform:
   m_ObjectHideFlags: 0

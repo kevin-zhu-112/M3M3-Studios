@@ -6,11 +6,12 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject powerUp;
     public GameObject platform;
+    private AudioSource m_Audio;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_Audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,6 +20,12 @@ public class EnemyManager : MonoBehaviour
         if (GameObject.Find("ShoeBoss") == null) {
             ShowPowerUp();
         }
+
+        if (GameObject.Find("PowerUpCollectible") == null) {
+            m_Audio.Play(0);
+        }
+        
+
     }
 
     
