@@ -24,7 +24,6 @@ public class EnemySquishScript : MonoBehaviour
     {
         if (collision.transform.gameObject.tag == "Enemy")
         {
-            Debug.Log(rb.velocity.y);
             if (gameObject.transform.position.y >= collision.transform.gameObject.transform.position.y)
             {
                 
@@ -33,21 +32,29 @@ public class EnemySquishScript : MonoBehaviour
             }
             else
             {
-                rb.AddForce(transform.forward * -400 + transform.up * 400);
+                rb.AddForce(collision.transform.gameObject.transform.forward * 400 + transform.up * 400);
             }
         }
         if (collision.transform.gameObject.tag == "Boss")
         {
-            if (rb.velocity.y < -0.5)
+            if (gameObject.transform.position.y >= collision.transform.gameObject.transform.position.y)
             {
-                Debug.Log("Hit");
-                collision.transform.gameObject.GetComponent<ShoeAIScript>().DealDmg();
+                Debug.Log("Should dmg");
+                collision.transform.gameObject.GetComponent<GenericAI>().DealDmg();
                 rb.AddForce(transform.up * 500);
             }
             else
             {
-                rb.AddForce(transform.forward * -500 + transform.up * 500);
+                if (collision.transform.gameObject.GetComponent(typeof(ShoeAIScript)))
+                {
+                    rb.AddForce(collision.transform.gameObject.transform.forward * 500 + transform.up * 500);
+                }
+                    
             }
+        }
+        if (collision.transform.gameObject.tag == "Attack")
+        {
+            rb.AddForce(collision.transform.gameObject.transform.forward * 500 + transform.up * 500);
         }
     }
 }
