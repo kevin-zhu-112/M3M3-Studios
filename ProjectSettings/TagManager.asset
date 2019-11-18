@@ -9,6 +9,8 @@ TagManager:
   - Wall
   - Placeable
   - EnemyWall
+  - Ground
+  - Attack
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - EnemyWall
   - Enemy
   - Player
-  - 
+  - Attack
   - 
   - 
   - 

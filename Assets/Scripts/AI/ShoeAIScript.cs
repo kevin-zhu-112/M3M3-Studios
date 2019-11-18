@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShoeAIScript : MonoBehaviour
+public class ShoeAIScript : GenericAI
 {
     public enum ShoeState
     {
@@ -67,7 +67,7 @@ public class ShoeAIScript : MonoBehaviour
         }
     }
 
-    public void DealDmg()
+    public override void DealDmg()
     {
         if (state != ShoeState.Hurt)
         {
