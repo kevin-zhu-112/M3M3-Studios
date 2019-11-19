@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUpCollector : MonoBehaviour
 {
-    public static bool doubleJumpPower =  false;
+    public static bool doubleJumpPower =  true;
     public static bool blockPlacePower = false;
     // Start is called before the first frame update
     void Start()
