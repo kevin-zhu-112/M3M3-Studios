@@ -445,11 +445,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCharacter
       objectReference: {fileID: 0}
-    - target: {fileID: 6843875100020373750, guid: c2dc42904993a57468155db7b9da261c,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1139302429}
     - target: {fileID: 5601945386845003193, guid: c2dc42904993a57468155db7b9da261c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -505,6 +500,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1078020172, guid: c2dc42904993a57468155db7b9da261c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ac56f3558097984fb9d779d9a02cdd6, type: 3}
     - target: {fileID: 248429385, guid: c2dc42904993a57468155db7b9da261c, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -513,10 +512,11 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1078020172, guid: c2dc42904993a57468155db7b9da261c, type: 3}
-      propertyPath: m_audioClip
+    - target: {fileID: 6843875100020373750, guid: c2dc42904993a57468155db7b9da261c,
+        type: 3}
+      propertyPath: player
       value: 
-      objectReference: {fileID: 8300000, guid: 2ac56f3558097984fb9d779d9a02cdd6, type: 3}
+      objectReference: {fileID: 1139302429}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2dc42904993a57468155db7b9da261c, type: 3}
 --- !u!1 &371553287
@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad4fba9f9fcf5b419dc44aa51c2a182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: GameMenu
+  sceneName: Level 1
 --- !u!1 &873203956
 GameObject:
   m_ObjectHideFlags: 0
