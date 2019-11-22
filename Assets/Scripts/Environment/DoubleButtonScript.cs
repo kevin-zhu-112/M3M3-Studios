@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonScript : MonoBehaviour
+public class DoubleButtonScript : MonoBehaviour
 {
     private Animator m_Animator;
     private AudioSource m_Audio;
     public GameObject target;
+    public GameObject otherButton;
     private GameObject presser;
+    private bool pressed;
     private bool boxPressed;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,21 +26,32 @@ public class ButtonScript : MonoBehaviour
         {
             m_Animator.enabled = false;
             boxPressed = false;
+            pressed = false;
         }
+    }
+
+    bool getPressed()
+    {
+        return pressed;
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.gameObject.tag == "Player" || collision.transform.gameObject.tag == "Placeable")
         {
+            pressed = true;
             if (collision.transform.gameObject.tag == "Placeable")
             {
                 boxPressed = true;
                 presser = collision.transform.gameObject;
             }
-            m_Animator.enabled = true;
-            m_Animator.SetTrigger("Move");
-            m_Audio.Play(0);
+
+            if (otherButton.GetComponent<DoubleButtonScript>().getPressed())
+            {
+                m_Animator.enabled = true;
+                m_Animator.SetTrigger("Move");
+                m_Audio.Play(0);
+            }
         }
     }
 
@@ -47,6 +60,7 @@ public class ButtonScript : MonoBehaviour
         if (collision.transform.gameObject.tag == "Player")
         {
             m_Animator.enabled = false;
+            pressed = false;
         }
     }
 }
