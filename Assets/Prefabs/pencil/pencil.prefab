@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4806875466933716777}
   - component: {fileID: 4806875466933716778}
   - component: {fileID: 6043898083620219969}
-  - component: {fileID: 1572188402188483661}
+  - component: {fileID: 7003122419480420744}
   m_Layer: 0
   m_Name: pencil
   m_TagString: Untagged
@@ -113,7 +113,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08000002, y: 0.07999999, z: 0.92}
   m_Center: {x: 0, y: 0, z: -0.04084232}
---- !u!114 &1572188402188483661
+--- !u!114 &7003122419480420744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

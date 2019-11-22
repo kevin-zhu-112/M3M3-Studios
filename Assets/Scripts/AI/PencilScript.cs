@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pencil : MonoBehaviour
+public class PencilScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
