@@ -42,11 +42,11 @@ public class ButtonScript : MonoBehaviour
         }
     }
 
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.transform.gameObject.tag == "Player")
-        {
-            m_Animator.enabled = false;
-        }
-    }
+    //void OnCollisionExit(Collision collision)
+    //{
+    //    if (collision.transform.gameObject.tag == "Player")
+    //    {
+    //        m_Animator.enabled = false;
+    //    }
+    //}
 }

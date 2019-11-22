@@ -7,7 +7,7 @@ public class EnemyManager : MonoBehaviour
     public GameObject powerUp;
     public GameObject platform;
     private AudioSource m_Audio;
-
+    private float timer = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,9 @@ public class EnemyManager : MonoBehaviour
             ShowPowerUp();
         }
 
-        if (GameObject.Find("PowerUpCollectible") == null) {
+        timer -= Time.deltaTime;
+
+        if (GameObject.Find("PowerUpCollectible") == null && timer < 0f) {
             m_Audio.Play(0);
         }
         
