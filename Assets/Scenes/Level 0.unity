@@ -3812,11 +3812,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Screen
       objectReference: {fileID: 0}
-    - target: {fileID: 2317456986355600505, guid: 16831edff927d504da84c9ce56910ec0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2317456986355600501, guid: 16831edff927d504da84c9ce56910ec0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4067,6 +4062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6843875100020373750, guid: c2dc42904993a57468155db7b9da261c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1078020165}
     - target: {fileID: 5601945386845003193, guid: c2dc42904993a57468155db7b9da261c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4122,11 +4122,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6843875100020373750, guid: c2dc42904993a57468155db7b9da261c,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1078020165}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2dc42904993a57468155db7b9da261c, type: 3}
 --- !u!1 &1460907278

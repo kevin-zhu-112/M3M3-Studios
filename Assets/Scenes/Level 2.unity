@@ -4158,8 +4158,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 99.30415, y: 0.7688408, z: 63.674873}
-  m_Center: {x: 4.8932953, y: 0.115579605, z: -3.2541962}
+  m_Size: {x: 211.65091, y: 0.7688408, z: 63.674873}
+  m_Center: {x: 10.060802, y: 0.115579605, z: -3.2541962}
 --- !u!4 &881222630
 Transform:
   m_ObjectHideFlags: 0
@@ -6221,6 +6221,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6843875100020373750, guid: c2dc42904993a57468155db7b9da261c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1078020165}
     - target: {fileID: 5601945386845003193, guid: c2dc42904993a57468155db7b9da261c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6276,11 +6281,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6843875100020373750, guid: c2dc42904993a57468155db7b9da261c,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1078020165}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2dc42904993a57468155db7b9da261c, type: 3}
 --- !u!1 &1460907278
