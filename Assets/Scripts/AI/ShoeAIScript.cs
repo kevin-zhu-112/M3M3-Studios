@@ -85,7 +85,7 @@ public class ShoeAIScript : GenericAI
         {
             flankRotation = transform.rotation * Quaternion.Euler(new Vector3(0, Random.Range(150f, 180f), 0));
             fleeTime += 0.5f;
-            state = ShoeState.Flank;
+            state = ShoeState.Chase;
         }
     }
 }
