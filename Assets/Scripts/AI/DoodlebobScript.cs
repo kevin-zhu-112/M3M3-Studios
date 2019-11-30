@@ -17,7 +17,7 @@ public class DoodlebobScript : MonoBehaviour
     private int obstacleInd, randX;
     private Vector3 obstaclePos; //where obstacle will spawn
     public DoodlebobState currState = DoodlebobState.Attacking;
-    private int health = 3;
+    public int health = 3;
     Vector3 destPos;
     private GameObject leftArm;
     private GameObject rightArm;
@@ -59,7 +59,7 @@ public class DoodlebobScript : MonoBehaviour
             case DoodlebobState.Moving:
                 if (transform.position.z > destPos.z)
                 {
-                    transform.position -= new Vector3(0, 0, .2f);
+                    transform.position -= new Vector3(0, 0, .5f);
                 }
                 else
                 {
