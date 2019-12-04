@@ -59,7 +59,6 @@ public class DoubleButtonScript : MonoBehaviour
     {
         if (collision.transform.gameObject.tag == "Player")
         {
-            m_Animator.enabled = false;
             pressed = false;
         }
     }
