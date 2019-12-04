@@ -18,14 +18,18 @@ public class ShoeAIScript : GenericAI
     public float fleeTime = 5.0f;
     public int moveSpeed = 4;
     public int health = 3;
+    public Material[] shoeMaterial;
+    public Material[] dmgMaterial;
 
     private AudioSource m_Audio;
     private Quaternion flankRotation;
     private Quaternion targetRotation;
+    private GameObject child;
 
     // Start is called before the first frame update
     void Start()
     {
+        child = transform.GetChild(0).gameObject;
         state = ShoeState.Chase;
         m_Audio = GetComponent<AudioSource>();
     }
@@ -39,11 +43,13 @@ public class ShoeAIScript : GenericAI
                 //Do nothing for now
                 break;
             case ShoeState.Chase:
+                child.GetComponent<MeshRenderer>().materials = shoeMaterial;
                 targetRotation = Quaternion.LookRotation(new Vector3(player.transform.position.x, 0, player.transform.position.z) - transform.position);
                 transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.05f);
                 transform.position += transform.forward * moveSpeed * Time.deltaTime;
                 break;
             case ShoeState.Hurt:
+                child.GetComponent<MeshRenderer>().materials = dmgMaterial;
                 targetRotation = Quaternion.LookRotation(transform.position - new Vector3(player.transform.position.x, 0, player.transform.position.z));
                 transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.05f);
                 transform.position += transform.forward * moveSpeed * 3 * Time.deltaTime;

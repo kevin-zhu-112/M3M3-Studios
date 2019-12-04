@@ -7,17 +7,19 @@ public class ThirdPersonCam : MonoBehaviour
 {
     public Transform lookAt;
     public Transform cameraTransform;
+    public float initialX;
+    public float initialY;
 
     private Camera cam;
 
     private float dist = 3.0f;
-    private float currentX = 10.0f;
-    private float currentY = 0.0f;
     private float sensX = 3.5f;
     private float sensY = 2.5f;
     
     private float finalInputX;
     private float finalInputZ;
+    private float currentX;
+    private float currentY;
 
     private float clampAngle = 80.0f;
     private float clampAngleMin = -25.0f;
@@ -45,6 +47,8 @@ public class ThirdPersonCam : MonoBehaviour
     {
         cameraTransform = transform;
         cam = Camera.main;
+        currentX = initialX;
+        currentY = initialY;
     }
 
     // Update is called once per frame
