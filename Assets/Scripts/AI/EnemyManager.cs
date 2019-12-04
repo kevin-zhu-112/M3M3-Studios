@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("ShoeBoss") == null) {
+        if (GameObject.Find("ShoeBoss") == null && GameObject.Find("Doodlebob") == null) {
             ShowPowerUp();
         }
 
