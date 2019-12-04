@@ -6,6 +6,8 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject powerUp;
     public GameObject platform;
+    public GameObject trigger;
+
     private AudioSource m_Audio;
     private float timer = 5.0f;
     // Start is called before the first frame update
@@ -34,5 +36,6 @@ public class EnemyManager : MonoBehaviour
     void ShowPowerUp() {
         powerUp.SetActive(true);
         platform.SetActive(true);
+        trigger.SetActive(true);
     }
 }
