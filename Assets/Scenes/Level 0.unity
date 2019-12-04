@@ -1635,6 +1635,26 @@ PrefabInstance:
       propertyPath: lookAt
       value: 
       objectReference: {fileID: 830744311}
+    - target: {fileID: 995678239508529369, guid: 4cf3ded5d1bf87441a059a0819065265,
+        type: 3}
+      propertyPath: initialAngle.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 995678239508529369, guid: 4cf3ded5d1bf87441a059a0819065265,
+        type: 3}
+      propertyPath: initialAngle.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 995678239508529369, guid: 4cf3ded5d1bf87441a059a0819065265,
+        type: 3}
+      propertyPath: initialX
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 995678239508529369, guid: 4cf3ded5d1bf87441a059a0819065265,
+        type: 3}
+      propertyPath: initialY
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cf3ded5d1bf87441a059a0819065265, type: 3}
 --- !u!1 &494238215
