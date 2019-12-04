@@ -31,7 +31,7 @@ public class CustomCharacterControl : MonoBehaviour {
 
     private float m_jumpTimeStamp = 0;
     private float m_minJumpInterval = 0.25f;
-    public bool m_doubleJump = true;
+    private bool m_doubleJump = true;
 
     private bool m_isGrounded;
     private List<Collider> m_collisions = new List<Collider>();
@@ -219,7 +219,8 @@ public class CustomCharacterControl : MonoBehaviour {
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
         }
 
-        if (mc.getDoubleJumpPower() && jump && !m_isGrounded && m_doubleJump && jumpCooldownOver)
+        //if (mc.getDoubleJumpPower() && jump && !m_isGrounded && m_doubleJump && jumpCooldownOver)
+        if (jump && !m_isGrounded && m_doubleJump && jumpCooldownOver)
         {
             m_jumpTimeStamp = Time.time;
             m_doubleJump = false;

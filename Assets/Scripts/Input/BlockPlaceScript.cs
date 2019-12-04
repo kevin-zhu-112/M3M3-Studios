@@ -34,19 +34,23 @@ public class BlockPlaceScript : MonoBehaviour
 
     void PlaceCube()
     {
+        block.SetActive(true);
         Instantiate(block, transform.position, transform.rotation);
+        Destroy(potentialBlock);
+        block = null;
         hasBlock = false;
     }
 
     void StoreCube()
     {
         hasBlock = true;
-        Destroy(potentialBlock);
+        block = potentialBlock;
+        potentialBlock.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Placeable")
+        if (other.gameObject.tag == "Placeable" && !hasBlock) 
         {
             potentialBlock = other.gameObject;
             hovered = true;
