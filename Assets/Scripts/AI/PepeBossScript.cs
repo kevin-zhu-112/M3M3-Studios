@@ -14,6 +14,8 @@ public class PepeBossScript : GenericAI
     public GameObject point;
     public GameObject shootAttack;
     public float cd;
+    public Dialogue enragedDialogue;
+    public Dialogue stunnedDialogue;
 
     private Rigidbody rb;
     private Animator anim;
@@ -22,6 +24,7 @@ public class PepeBossScript : GenericAI
     private float startTime = 1.0f;
     private UnityEngine.AI.NavMeshAgent agent;
     private bool enraged = false;
+    private float times = 0f;
 
     private AudioSource m_audio;
     public AudioClip hurt;
@@ -138,9 +141,14 @@ public class PepeBossScript : GenericAI
                 {
                     if (wayPoint % 2 == 0)
                     {
-                        if (Random.Range(0f, 1f) < .2f)
+                        if (Random.Range(0f, 1f) < (0.1f * times))
                         {
+                            FindObjectOfType<DialogueManager>().StartDialogue(stunnedDialogue);
                             state = State.Stunned;
+                            times = 0;
+                        } else
+                        {
+                            times += 1f;
                         }
                     }
                     if (Random.Range(-1.0f, 1.0f) < 0.0f)
@@ -204,9 +212,10 @@ public class PepeBossScript : GenericAI
             {
                 Destroy(gameObject);
             }
-            if (health <= 3)
+            if (health == 3)
             {
                 enraged = true;
+                FindObjectOfType<DialogueManager>().StartDialogue(enragedDialogue);
             }
             anim.SetBool("Crouch", false);
             fleePoint = fleePoints[Random.Range(0, fleePoints.Length)];
