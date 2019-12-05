@@ -3,20 +3,25 @@ using System.Collections;
 
 public class PepeBossScript : GenericAI
 {
-    private UnityEngine.AI.NavMeshAgent agent;
-    public ParticleSystem[] particles;
-    public GameObject[] fleePoints;
-    private GameObject fleePoint;
-    private float startTime = 1.0f;
-    private Rigidbody rb;
-    public GameObject point;
-    private Animator anim;
     public State state;
     public bool grounded = true;
-    public float stunTime = 3.0f;
-    public int health = 3;
+    public float stunTime;
+    public int health;
     public GameObject stompAttack;
     public GameObject[] stompEffects;
+    public GameObject[] particles;
+    public GameObject[] fleePoints;
+    public GameObject point;
+    public GameObject shootAttack;
+    public float cd;
+
+    private Rigidbody rb;
+    private Animator anim;
+    private int wayPoint = 0;
+    private GameObject fleePoint;
+    private float startTime = 1.0f;
+    private UnityEngine.AI.NavMeshAgent agent;
+    private bool enraged = false;
 
     private AudioSource m_audio;
     public AudioClip hurt;
@@ -30,6 +35,7 @@ public class PepeBossScript : GenericAI
         Surround,
         Jumping,
         Stunned,
+        Shoot,
         Flee
     }
 
@@ -84,29 +90,83 @@ public class PepeBossScript : GenericAI
                 }
                 break;
             case State.Stunned:
+                anim.SetFloat("Forward", 0);
+                agent.enabled = false;
                 anim.SetBool("Crouch", true);
                 rb.constraints = RigidbodyConstraints.FreezeAll;
                 if (stunTime < 0f)
                 {
                     rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-                    stunTime = 3.0f;
                     anim.SetBool("Crouch", false);
                     agent.enabled = true;
-                    state = State.Chase;
+                    if (enraged)
+                    {
+                        state = State.Shoot;
+                        stunTime = 15.0f;
+                    }
+                    else
+                    {
+                        state = State.Chase;
+                        stunTime = 7.5f;
+                    }
                 }
                 stunTime -= Time.deltaTime;
                 break;
             case State.Flee:
                 rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-                stunTime = 3.0f;
                 agent.enabled = true;
                 agent.SetDestination(fleePoint.transform.position);
                 anim.SetFloat("Forward", agent.velocity.magnitude / agent.speed, .1f, Time.deltaTime);
-                if (agent.remainingDistance < 1)
+                if (agent.remainingDistance < 1 && startTime <= 0)
                 {
                     startTime = 1.0f;
-                    state = State.Chase;
+                    if (enraged)
+                    {
+                        state = State.Shoot;
+                        stunTime = 15.0f;
+                    } else
+                    {
+                        state = State.Chase;
+                        stunTime = 7.5f;
+                    }
+                    
                 }
+                startTime -= Time.deltaTime;
+                break;
+            case State.Shoot:
+                if (agent.remainingDistance < 1)
+                {
+                    if (wayPoint % 2 == 0)
+                    {
+                        if (Random.Range(0f, 1f) < .2f)
+                        {
+                            state = State.Stunned;
+                        }
+                    }
+                    if (Random.Range(-1.0f, 1.0f) < 0.0f)
+                    {
+                        wayPoint += 1;
+                    } else
+                    {
+                        wayPoint -= 1;
+                        if (wayPoint < 0) wayPoint = 7;
+                    }
+                    wayPoint = wayPoint % 8;
+                    fleePoint = fleePoints[wayPoint];
+                }
+                if (cd <= 0)
+                {
+                    var look = point.transform.position - transform.position;
+                    GameObject bullet = Instantiate(shootAttack, transform.position, Quaternion.LookRotation(look)) as GameObject;
+                    bullet.GetComponent<Rigidbody>().AddForce(bullet.transform.forward * 1000);
+                    cd = 0.5f;
+                } else
+                {
+                    cd -= Time.deltaTime;
+                }
+                anim.SetFloat("Forward", agent.velocity.magnitude / agent.speed, .1f, Time.deltaTime);
+                agent.speed = 10;
+                agent.SetDestination(fleePoint.transform.position);
                 break;
             default:
                 break;
@@ -135,7 +195,7 @@ public class PepeBossScript : GenericAI
 
     public override void DealDmg()
     {
-        if (state != State.Flee)
+        if (state == State.Stunned)
         {
             m_audio.clip = hurt;
             m_audio.Play();
@@ -144,9 +204,13 @@ public class PepeBossScript : GenericAI
             {
                 Destroy(gameObject);
             }
-            state = State.Flee;
+            if (health <= 3)
+            {
+                enraged = true;
+            }
             anim.SetBool("Crouch", false);
             fleePoint = fleePoints[Random.Range(0, fleePoints.Length)];
+            state = State.Flee;
         }
     }
 }
