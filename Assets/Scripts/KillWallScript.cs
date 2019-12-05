@@ -17,7 +17,7 @@ public class KillWallScript : MonoBehaviour
     {
         if (doodlebob.GetComponent<DoodlebobScript>().currState != DoodlebobScript.DoodlebobState.Dead && Time.timeScale > .001f)
         {
-            transform.position -= new Vector3(0, 0, (4 - doodlebob.GetComponent<DoodlebobScript>().health) * .02f);
+            transform.position -= new Vector3(0, 0, (4 - doodlebob.GetComponent<DoodlebobScript>().health) * .015f);
         }
     }
 }
