@@ -75,7 +75,7 @@ public class DoodlebobScript : MonoBehaviour
                 break;
 
             case DoodlebobState.Dead:
-                levelDoor.SetActive(true);
+                //levelDoor.SetActive(true);
                 Destroy(GameObject.Find("Kill Wall"));
                 Destroy(gameObject);
                 break;

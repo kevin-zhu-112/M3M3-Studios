@@ -9,7 +9,7 @@ public class ButtonPlaceable : MonoBehaviour
     public GameObject target;
     public GameObject otherButton;
     private GameObject presser;
-    private bool pressed;
+    public bool pressed;
     private bool boxPressed;
     public Material placeableColor;
 
