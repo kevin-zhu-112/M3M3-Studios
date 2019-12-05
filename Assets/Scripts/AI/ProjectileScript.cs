@@ -21,7 +21,9 @@ public class ProjectileScript : MonoBehaviour
     {
         if (c.collider.gameObject.CompareTag("Player"))
         {
-            Instantiate(attack, transform.position, transform.rotation);
+            var look = c.collider.gameObject.transform.position - transform.position;
+            look.y = 0;
+            Instantiate(attack, transform.position, Quaternion.LookRotation(look));
             Destroy(gameObject);
         }
     }
