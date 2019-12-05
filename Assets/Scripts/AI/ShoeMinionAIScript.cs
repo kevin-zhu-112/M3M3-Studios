@@ -18,7 +18,7 @@ public class ShoeMinionAIScript : MonoBehaviour
     public int turnSpeed;
     public int strength;
 
-    AudioSource damnDaniel;
+    AudioSource m_audio;
     float distToPlayer;
 
 
@@ -27,7 +27,7 @@ public class ShoeMinionAIScript : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         state = ShoeState.Idle;
-        damnDaniel = GetComponent<AudioSource>();
+        m_audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -60,23 +60,22 @@ public class ShoeMinionAIScript : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        if (player.transform.position.y >= gameObject.transform.position.y)
-    //        {
-    //            hurt.Play();
-    //            Destroy(gameObject);
-    //        }
-    //        else
-    //        {
-    //            //TODO: hurt player
-
-    //            damnDaniel.Play();
-    //            // Push player back
-    //            player.GetComponent<Rigidbody>().AddForce(strength * transform.forward);
-    //        }
-    //    }
-    //}
+    public void Play()
+    {
+        hurt.Play();
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (player.transform.position.y >= gameObject.transform.position.y)
+            {
+                hurt.Play();
+            }
+            else
+            {
+                m_audio.Play();
+            }
+        }
+    }
 }

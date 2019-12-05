@@ -6,6 +6,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     private AudioSource m_Audio;
+    private bool triggered = false;
 
     void Start()
     {
@@ -14,7 +15,8 @@ public class DialogueTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider c)
     {
-        if (c.transform.gameObject.tag == "Player") {       
+        if (c.transform.gameObject.tag == "Player" && !triggered) {
+            triggered = true;
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             m_Audio.Play(0);
         }
