@@ -44,7 +44,6 @@ public class BlockSoundScript : MonoBehaviour
 
     void OnCollisionEnter(Collision c)
     {
-        Debug.Log("Dropped");
         if (Mathf.Abs(rb.velocity.y) > 0.000001f)
         {
             m_audio.clip = drop;

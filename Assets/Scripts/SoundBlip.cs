@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GenericAI : MonoBehaviour
+public class SoundBlip : MonoBehaviour
 {
+    private AudioSource m_audio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -16,13 +17,8 @@ public class GenericAI : MonoBehaviour
         
     }
 
-    public virtual void DealDmg()
+    public void Sound()
     {
-
-    }
-
-    public virtual void DmgPlayer()
-    {
-
+        m_audio.Play();
     }
 }
