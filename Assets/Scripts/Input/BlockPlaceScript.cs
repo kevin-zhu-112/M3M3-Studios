@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BlockPlaceScript : MonoBehaviour
 {
@@ -10,6 +11,24 @@ public class BlockPlaceScript : MonoBehaviour
 
     public GameObject potentialBlock;
     public bool hovered = false;
+
+    PlayerControls controls;
+    private bool pickUpControl = false;
+
+    void Awake() {
+        controls = new PlayerControls();
+        controls.Gameplay.PickUp.performed += ctx => pickUpControl = true;
+        controls.Gameplay.PickUp.canceled += ctx => pickUpControl = false;
+    }
+
+    public void OnEnable() {
+        controls.Enable();
+    }
+
+    public void OnDisable() {
+        controls.Disable();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +38,10 @@ public class BlockPlaceScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.F) && power)
-        {
+        if ((Input.GetKeyUp(KeyCode.F) || pickUpControl) && power)
+        {   
+
+            pickUpControl = false;
             if (hasBlock)
             {
                 PlaceCube();
