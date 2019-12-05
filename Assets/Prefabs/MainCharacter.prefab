@@ -560,7 +560,6 @@ MonoBehaviour:
   m_animator: {fileID: 5547568055858667373}
   m_rigidBody: {fileID: 5597768710980443346}
   m_controlMode: 1
-  m_doubleJump: 1
 --- !u!114 &6157359241570846813
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,12 +8,10 @@ public class EnemyManager : MonoBehaviour
     public GameObject platform;
     public GameObject trigger;
 
-    private AudioSource m_Audio;
-    private float timer = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
-        m_Audio = GetComponent<AudioSource>();
+        //m_Audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,12 +20,9 @@ public class EnemyManager : MonoBehaviour
         if (GameObject.Find("ShoeBoss") == null && GameObject.Find("Doodlebob") == null) {
             ShowPowerUp();
         }
-
-        timer -= Time.deltaTime;
-
-        if (GameObject.Find("PowerUpCollectible") == null && timer < 0f) {
-            m_Audio.Play(0);
-        }
+        // if (GameObject.Find("PowerUpCollectible") == null && timer < 0f) {
+        //     m_Audio.Play(0);
+        // }
         
 
     }

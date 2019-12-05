@@ -44,6 +44,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Tap"
+                },
+                {
+                    "name": "Pick up",
+                    "type": "Button",
+                    "id": "89a31fdc-3767-4abb-8500-414816e3e122",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Tap"
                 }
             ],
             "bindings": [
@@ -231,6 +239,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6d30e19c-9bd1-4097-84be-e79992cedcd0",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick up",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

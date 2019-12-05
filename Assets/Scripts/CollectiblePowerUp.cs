@@ -17,14 +17,17 @@ public class CollectiblePowerUp : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider c) {
-    if (c.attachedRigidbody != null) {
-        PowerUpCollector mc = c.attachedRigidbody.gameObject.GetComponent<PowerUpCollector>(); 
+        if (c.attachedRigidbody != null) {
+            PowerUpCollector mc = c.attachedRigidbody.gameObject.GetComponent<PowerUpCollector>(); 
 
-        if (mc != null) {
-            mc.ReceiveDoubleJump();
-            // EventManager.TriggerEvent<BombBounceEvent, Vector3>(c.transform.position);
-            Destroy(this.gameObject);
+            if (mc != null) {
+                mc.ReceiveDoubleJump();
+                // EventManager.TriggerEvent<BombBounceEvent, Vector3>(c.transform.position);
+                if (c.transform.gameObject.tag == "Player") {  
+                    Destroy(this.gameObject);
+                }
             }
+            
         }
     }
 }

@@ -57,6 +57,14 @@ public class PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Tap""
+                },
+                {
+                    ""name"": ""Pick up"",
+                    ""type"": ""Button"",
+                    ""id"": ""89a31fdc-3767-4abb-8500-414816e3e122"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Tap""
                 }
             ],
             ""bindings"": [
@@ -246,6 +254,17 @@ public class PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Menu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6d30e19c-9bd1-4097-84be-e79992cedcd0"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pick up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -259,6 +278,7 @@ public class PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
         m_Gameplay_Camera = m_Gameplay.FindAction("Camera", throwIfNotFound: true);
         m_Gameplay_Menu = m_Gameplay.FindAction("Menu", throwIfNotFound: true);
+        m_Gameplay_Pickup = m_Gameplay.FindAction("Pick up", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -313,6 +333,7 @@ public class PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Jump;
     private readonly InputAction m_Gameplay_Camera;
     private readonly InputAction m_Gameplay_Menu;
+    private readonly InputAction m_Gameplay_Pickup;
     public struct GameplayActions
     {
         private PlayerControls m_Wrapper;
@@ -322,6 +343,7 @@ public class PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @Camera => m_Wrapper.m_Gameplay_Camera;
         public InputAction @Menu => m_Wrapper.m_Gameplay_Menu;
+        public InputAction @Pickup => m_Wrapper.m_Gameplay_Pickup;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -346,6 +368,9 @@ public class PlayerControls : IInputActionCollection, IDisposable
                 Menu.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMenu;
                 Menu.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMenu;
                 Menu.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMenu;
+                Pickup.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPickup;
+                Pickup.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPickup;
+                Pickup.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPickup;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -365,6 +390,9 @@ public class PlayerControls : IInputActionCollection, IDisposable
                 Menu.started += instance.OnMenu;
                 Menu.performed += instance.OnMenu;
                 Menu.canceled += instance.OnMenu;
+                Pickup.started += instance.OnPickup;
+                Pickup.performed += instance.OnPickup;
+                Pickup.canceled += instance.OnPickup;
             }
         }
     }
@@ -376,5 +404,6 @@ public class PlayerControls : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnCamera(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
+        void OnPickup(InputAction.CallbackContext context);
     }
 }
