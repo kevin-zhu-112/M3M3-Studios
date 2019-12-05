@@ -186,7 +186,7 @@ public class PepeBossScript : GenericAI
     {
         if (!grounded)
         {
-            if (collision.transform.gameObject.tag == "Ground")
+            if (collision.transform.gameObject.tag == "Ground" || collision.transform.gameObject.tag == "Placeable")
             {
                 m_audio.clip = blast;
                 m_audio.Play();
