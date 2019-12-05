@@ -46,9 +46,9 @@
                     "interactions": "Tap"
                 },
                 {
-                    "name": "Pick up",
+                    "name": "PickUp",
                     "type": "Button",
-                    "id": "89a31fdc-3767-4abb-8500-414816e3e122",
+                    "id": "e3bbfeed-9ffe-4526-8e64-450b195ed157",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Tap"
@@ -244,12 +244,12 @@
                 },
                 {
                     "name": "",
-                    "id": "6d30e19c-9bd1-4097-84be-e79992cedcd0",
-                    "path": "<Keyboard>/f",
+                    "id": "deabd3d0-29d3-4423-9e25-cdb8c906adaf",
+                    "path": "<SwitchProControllerHID>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Pick up",
+                    "action": "PickUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
