@@ -39,7 +39,6 @@ public class EnemySquishScript : MonoBehaviour
         {
             if (gameObject.transform.position.y >= collision.transform.gameObject.transform.position.y)
             {
-                Debug.Log("Should dmg");
                 collision.transform.gameObject.GetComponent<GenericAI>().DealDmg();
                 rb.AddForce(transform.up * 500);
             }
@@ -47,6 +46,7 @@ public class EnemySquishScript : MonoBehaviour
             {
                 if (collision.transform.gameObject.GetComponent(typeof(ShoeAIScript)))
                 {
+                    collision.transform.gameObject.GetComponent<GenericAI>().DmgPlayer();
                     rb.AddForce(collision.transform.gameObject.transform.forward * 500 + transform.up * 500);
                 }
                     
@@ -54,6 +54,7 @@ public class EnemySquishScript : MonoBehaviour
         }
         if (collision.transform.gameObject.tag == "Attack")
         {
+            collision.transform.gameObject.GetComponent<SoundBlip>().Sound();
             rb.AddForce(collision.transform.gameObject.transform.forward * 500 + transform.up * 500);
         }
     }

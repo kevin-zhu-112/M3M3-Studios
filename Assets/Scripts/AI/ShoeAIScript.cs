@@ -20,6 +20,8 @@ public class ShoeAIScript : GenericAI
     public int health = 3;
     public Material[] shoeMaterial;
     public Material[] dmgMaterial;
+    public AudioClip hurt;
+    public AudioClip damage;
 
     private AudioSource m_Audio;
     private Quaternion flankRotation;
@@ -77,12 +79,19 @@ public class ShoeAIScript : GenericAI
     {
         if (state != ShoeState.Hurt)
         {
-            m_Audio.Play(0);
+            m_Audio.clip = hurt;
+            m_Audio.Play();
             fleeTime = 5.0f;
             health--;
             if (health == 0) Destroy(this.gameObject);
             state = ShoeState.Hurt;
         }
+    }
+
+    public override void DmgPlayer()
+    {
+        m_Audio.clip = damage;
+        m_Audio.Play();
     }
 
     void OnTriggerEnter(Collider other)
