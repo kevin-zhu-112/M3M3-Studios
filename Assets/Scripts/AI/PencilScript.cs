@@ -11,7 +11,7 @@ public class PencilScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Time.timeScale > .001f)
         {

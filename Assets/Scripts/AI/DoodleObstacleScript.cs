@@ -11,7 +11,7 @@ public class DoodleObstacleScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Time.timeScale > .001f)
         {
@@ -27,6 +27,7 @@ public class DoodleObstacleScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 400 + transform.up * 400);
             Destroy(gameObject);
         }
     }
