@@ -27,7 +27,7 @@ public class DoodleObstacleScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 400 + transform.up * 400);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 300 + transform.up * 200);
             Destroy(gameObject);
         }
     }

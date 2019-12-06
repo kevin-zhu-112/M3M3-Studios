@@ -62,7 +62,7 @@ public class DoodlebobScript : MonoBehaviour
             case DoodlebobState.Moving:
                 if (transform.position.z > destPos.z)
                 {
-                    transform.position -= new Vector3(0, 0, .25f);
+                    transform.position -= new Vector3(0, 0, .3f);
                 }
                 else
                 {
