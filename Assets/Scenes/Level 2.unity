@@ -371,7 +371,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -524,12 +524,12 @@ PrefabInstance:
     - target: {fileID: 9040843173760084537, guid: 6d49be0105028da42959870b81841778,
         type: 3}
       propertyPath: otherButton
-      value:
+      value: 
       objectReference: {fileID: 40443311}
     - target: {fileID: 9040843173760084537, guid: 6d49be0105028da42959870b81841778,
         type: 3}
       propertyPath: target
-      value:
+      value: 
       objectReference: {fileID: 484832509}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d49be0105028da42959870b81841778, type: 3}
@@ -1047,12 +1047,12 @@ PrefabInstance:
     - target: {fileID: 9040843173760084537, guid: 6d49be0105028da42959870b81841778,
         type: 3}
       propertyPath: otherButton
-      value:
+      value: 
       objectReference: {fileID: 1034441297}
     - target: {fileID: 9040843173760084537, guid: 6d49be0105028da42959870b81841778,
         type: 3}
       propertyPath: target
-      value:
+      value: 
       objectReference: {fileID: 484832509}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d49be0105028da42959870b81841778, type: 3}
@@ -1084,8 +1084,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1103,8 +1103,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
@@ -1267,7 +1267,7 @@ PrefabInstance:
     - target: {fileID: 995678239508529369, guid: 4cf3ded5d1bf87441a059a0819065265,
         type: 3}
       propertyPath: lookAt
-      value:
+      value: 
       objectReference: {fileID: 830744311}
     - target: {fileID: 995678239508529369, guid: 4cf3ded5d1bf87441a059a0819065265,
         type: 3}
@@ -2216,12 +2216,12 @@ PrefabInstance:
     - target: {fileID: 2121117028342256408, guid: e583502e237c6b24c8fb22af248ee1a8,
         type: 3}
       propertyPath: otherButton
-      value:
+      value: 
       objectReference: {fileID: 1068050413}
     - target: {fileID: 2121117028342256408, guid: e583502e237c6b24c8fb22af248ee1a8,
         type: 3}
       propertyPath: target
-      value:
+      value: 
       objectReference: {fileID: 146886406}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e583502e237c6b24c8fb22af248ee1a8, type: 3}
@@ -2480,8 +2480,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -2497,8 +2497,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -2829,12 +2829,12 @@ PrefabInstance:
     - target: {fileID: 2121117028342256408, guid: e583502e237c6b24c8fb22af248ee1a8,
         type: 3}
       propertyPath: otherButton
-      value:
+      value: 
       objectReference: {fileID: 947574298}
     - target: {fileID: 2121117028342256408, guid: e583502e237c6b24c8fb22af248ee1a8,
         type: 3}
       propertyPath: target
-      value:
+      value: 
       objectReference: {fileID: 146886406}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e583502e237c6b24c8fb22af248ee1a8, type: 3}
@@ -2871,7 +2871,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -3024,7 +3024,7 @@ PrefabInstance:
     - target: {fileID: 8087349546989654495, guid: 5d1c3ce3d109071499516bb11fbd2f6d,
         type: 3}
       propertyPath: canvas
-      value:
+      value: 
       objectReference: {fileID: 2136716697}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d1c3ce3d109071499516bb11fbd2f6d, type: 3}
@@ -3055,8 +3055,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9495d3fb3ef9de40bb5d2aed12e60c6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   movingPlatform: {fileID: 1022018124660461732, guid: 6d0febff9081e0d459802f1867c46cda,
     type: 3}
   cd: 6
@@ -3824,12 +3824,16 @@ PrefabInstance:
     - target: {fileID: 6843875100020373750, guid: c2dc42904993a57468155db7b9da261c,
         type: 3}
       propertyPath: player
-      value:
+      value: 
       objectReference: {fileID: 1078020165}
     - target: {fileID: 1078020172, guid: c2dc42904993a57468155db7b9da261c, type: 3}
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1078020172, guid: c2dc42904993a57468155db7b9da261c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fc2a46411c43aa429b9033592f79a95, type: 3}
     - target: {fileID: 8221481338210423859, guid: c2dc42904993a57468155db7b9da261c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3845,10 +3849,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.62
       objectReference: {fileID: 0}
-    - target: {fileID: 1078020172, guid: c2dc42904993a57468155db7b9da261c, type: 3}
-      propertyPath: m_audioClip
-      value:
-      objectReference: {fileID: 8300000, guid: 1fc2a46411c43aa429b9033592f79a95, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2dc42904993a57468155db7b9da261c, type: 3}
 --- !u!1001 &1440178376
@@ -3993,8 +3993,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ad4fba9f9fcf5b419dc44aa51c2a182, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   sceneName: Boss Testing
 --- !u!1001 &1489142728
 PrefabInstance:
@@ -4440,6 +4440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449793613033312616, guid: fd2ab73125d314097913cc0c17b49b9e,
+        type: 3}
+      propertyPath: attackRadius
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd2ab73125d314097913cc0c17b49b9e, type: 3}
@@ -5240,8 +5245,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9495d3fb3ef9de40bb5d2aed12e60c6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   movingPlatform: {fileID: 1022018124660461732, guid: 6d0febff9081e0d459802f1867c46cda,
     type: 3}
   cd: 6
@@ -5735,12 +5740,12 @@ PrefabInstance:
     - target: {fileID: 3639509524102332711, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
         type: 3}
       propertyPath: m_rigidBody
-      value:
+      value: 
       objectReference: {fileID: 1573434817}
     - target: {fileID: 3639509524102332711, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
         type: 3}
       propertyPath: m_animator
-      value:
+      value: 
       objectReference: {fileID: 1573434815}
     - target: {fileID: 3639509524102332711, guid: 3f6c8ff90ef5f9e45aae9a47cf816e1f,
         type: 3}
@@ -5819,7 +5824,7 @@ PrefabInstance:
     - target: {fileID: 8874803258917272428, guid: 1b3c396446993094fa9b8f266f845ffb,
         type: 3}
       propertyPath: pauseMenu
-      value:
+      value: 
       objectReference: {fileID: 1392599883}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b3c396446993094fa9b8f266f845ffb, type: 3}
