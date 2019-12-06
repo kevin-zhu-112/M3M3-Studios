@@ -1,30 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class LoadSceneScript : MonoBehaviour
+public class PowerUpSetter : MonoBehaviour
 {
     private PowerUpCollector mc = new PowerUpCollector();
+    public bool doubleJump;
+    public bool pickUp;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (doubleJump) mc.ReceiveDoubleJump();
+        if (pickUp) mc.ReceiveBlockPlace();
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    public void loadScene(string sceneName)
-    {
-        Time.timeScale = 1f;
-        if (sceneName == "GameMenu")
-        {
-            mc.Reset();
-        }
-        SceneManager.LoadScene(sceneName);
     }
 }

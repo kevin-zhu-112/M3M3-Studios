@@ -26,6 +26,12 @@ public class PowerUpCollector : MonoBehaviour
         blockPlacePower = true;
     }
 
+    public void Reset()
+    {
+        doubleJumpPower = false;
+        blockPlacePower = false;
+    }
+
     public bool getDoubleJumpPower() {
         return doubleJumpPower;
     }
