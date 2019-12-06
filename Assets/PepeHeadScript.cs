@@ -63,6 +63,10 @@ public class PepeHeadScript : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
                 // move towards player
                 transform.position += transform.forward * speed * Time.deltaTime;
+                if (player.transform.position.y < transform.position.y - 5)
+                {
+                    Destroy(gameObject);
+                }
                 break;
 
             default:

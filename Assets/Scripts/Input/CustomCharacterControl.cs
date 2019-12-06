@@ -83,6 +83,11 @@ public class CustomCharacterControl : MonoBehaviour {
                 m_isGrounded = true;
             }
         }
+        //(alex booth) added this to prevent infinite jump
+        if ((collision.gameObject.tag == "Enemy") && gameObject.transform.position.y >= collision.transform.gameObject.transform.position.y)
+        {
+            m_isGrounded = false;
+        }
     }
 
     private void OnCollisionStay(Collision collision)
