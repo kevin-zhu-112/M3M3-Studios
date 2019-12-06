@@ -21,6 +21,10 @@ public class LevelSelect : MonoBehaviour
     {
 
     }
+    public void StartLevel(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
 
     public void StartLevelOne()
     {
@@ -49,6 +53,20 @@ public class LevelSelect : MonoBehaviour
     }
 
     public void CloseControls() {
+        controls.SetActive(false);
+        titleImage.SetActive(true);
+        menuButtons.SetActive(true);
+    }
+
+    public void OpenLevelSelect()
+    {
+        controls.SetActive(true);
+        titleImage.SetActive(false);
+        menuButtons.SetActive(false);
+    }
+
+    public void CloseLevelSelect()
+    {
         controls.SetActive(false);
         titleImage.SetActive(true);
         menuButtons.SetActive(true);
