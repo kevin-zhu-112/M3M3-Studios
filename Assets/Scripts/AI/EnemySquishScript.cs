@@ -55,7 +55,7 @@ public class EnemySquishScript : MonoBehaviour
         if (collision.transform.gameObject.tag == "Attack")
         {
             collision.transform.gameObject.GetComponent<SoundBlip>().Sound();
-            rb.AddForce(collision.transform.gameObject.transform.forward * 400 + transform.up * 400);
+            rb.AddForce(collision.transform.gameObject.transform.forward * 200 + transform.up * 200);
         }
     }
 }

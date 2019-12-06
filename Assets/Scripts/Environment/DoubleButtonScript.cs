@@ -11,6 +11,7 @@ public class DoubleButtonScript : MonoBehaviour
     private GameObject presser;
     public bool pressed;
     private bool boxPressed;
+    private int num = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class DoubleButtonScript : MonoBehaviour
     {
         if (collision.transform.gameObject.tag == "Player" || collision.transform.gameObject.tag == "Placeable")
         {
+            num++;
             pressed = true;
             if (collision.transform.gameObject.tag == "Placeable")
             {
@@ -57,9 +59,13 @@ public class DoubleButtonScript : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.transform.gameObject.tag == "Player")
+        if (collision.transform.gameObject.tag == "Player" || collision.transform.gameObject.tag == "Placeable")
         {
-            pressed = false;
+            num--;
+            if (num == 0)
+            {
+                pressed = false;
+            }
         }
     }
 }

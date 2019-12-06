@@ -45,6 +45,13 @@ Certain Terrain Textures and Environmental Features (Trees, rocks, plants) - htt
 
 Pepe Model and Animations (Except for the Ninja Run) - https://sketchfab.com/3d-models/mr-pepe-decad7495b8a423386bb9bd5a0a9760d
 
+Images used in Level 1 Boss (Doodlebob) - https://spongebob.fandom.com/wiki/DoodleBob/gallery
+
+Pencil model - https://assetstore.unity.com/packages/3d/props/tools/pencil-8741
+
+Powerup SFX - Metroid ~ Item Acquisition Fanfare (https://www.youtube.com/watch?v=xpAB3kkIXg4)
+              Super Metroid ~ Item Acquisition Fanfare (https://www.youtube.com/watch?v=MdEFCzMNPa0)
+
 Level 0 Music - Old School RuneScape ~ Harmony (https://www.youtube.com/watch?v=ELTyyPwjtiw)
 
 Boss Music - Phonson (https://opengameart.org/content/boss-fight)

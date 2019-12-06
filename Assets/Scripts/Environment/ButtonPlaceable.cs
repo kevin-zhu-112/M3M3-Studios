@@ -5,19 +5,20 @@ using UnityEngine;
 public class ButtonPlaceable : MonoBehaviour
 {
     //private Animator m_Animator;
-    //private AudioSource m_Audio;
+    private AudioSource m_Audio;
     public GameObject target;
     public GameObject otherButton;
     private GameObject presser;
     public bool pressed;
     private bool boxPressed;
     public Material placeableColor;
+    private int num = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         //m_Animator = target.GetComponent<Animator>();
-        //m_Audio = GetComponent<AudioSource>();
+        m_Audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class ButtonPlaceable : MonoBehaviour
     {
         if (collision.transform.gameObject.tag == "Player" || collision.transform.gameObject.tag == "Placeable")
         {
+            num++;
             pressed = true;
             if (collision.transform.gameObject.tag == "Placeable")
             {
@@ -51,7 +53,7 @@ public class ButtonPlaceable : MonoBehaviour
             {
                 //m_Animator.enabled = true;
                 //m_Animator.SetTrigger("Move");
-                //m_Audio.Play(0);
+                m_Audio.Play(0);
                 target.tag = "Placeable";
                 target.GetComponent<Renderer>().material = placeableColor;
                 
@@ -61,10 +63,13 @@ public class ButtonPlaceable : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.transform.gameObject.tag == "Player")
+        if (collision.transform.gameObject.tag == "Player" || collision.transform.gameObject.tag == "Placeable")
         {
-            //m_Animator.enabled = false;
-            pressed = false;
+            num--;
+            if (num == 0)
+            {
+                pressed = false;
+            }
         }
     }
 }
