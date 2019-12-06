@@ -61,7 +61,8 @@ The Pepe Boss will sometimes be stuck in midair while in his stunned animation.
 Placing a block inside another gameobject using the Place Block powerup will sometimes push the block back and give the player a ton of momentum.
 Jellyfish will sometimes die unintentionally when the player collides with them from below instead of knocking the player back.
 The player can sometimes gain a lot of upward momentum if the player presses the jump button at a precise moment after bouncing off an enemy or landing on a ledge.
-Some parts of the central mountain in Level 2 is unintentionally scalable by the player by repeatedly jumping up the mountain, though it takes a bit of time.
+The player appears to sink into platforms that are moving upwards.
+Some parts of the central mountain in Level 2 is unintentionally scalable by the player by repeatedly jumping up the mountain, though it takes a bit of time. The player can also sometimes clip through the terrain if he attepts to do this.
 
 
 Who Did What:
