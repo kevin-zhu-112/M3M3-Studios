@@ -6862,6 +6862,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7778494835013478134, guid: bf1bdf8c0be86cb47b741a4d5253c197,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: HEY LISTEN! Welcome, uh... I'll call you Tanner. Welcome to the world,
+        Tanner.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf1bdf8c0be86cb47b741a4d5253c197, type: 3}
 --- !u!1001 &8874803259068416119

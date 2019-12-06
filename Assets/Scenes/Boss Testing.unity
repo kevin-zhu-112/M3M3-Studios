@@ -3966,7 +3966,7 @@ PrefabInstance:
     - target: {fileID: 3997835613409815120, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: GameMenu
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 3997835613409815120, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
         type: 3}
@@ -4007,7 +4007,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: eb8b74b826ac5d24cada1a267fffc482,
+      objectReference: {fileID: 21300000, guid: d4e30cfc110edc3468eb940cf1cb8d90,
         type: 3}
     - target: {fileID: 3997835614403952241, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
         type: 3}
@@ -4032,7 +4032,7 @@ PrefabInstance:
     - target: {fileID: 3997835613301892685, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
         type: 3}
       propertyPath: m_Text
-      value: Main Menu
+      value: Continue
       objectReference: {fileID: 0}
     - target: {fileID: 3997835613425981540, guid: 3ff5c66007bd4fd49bd9b154bf80d7b9,
         type: 3}
