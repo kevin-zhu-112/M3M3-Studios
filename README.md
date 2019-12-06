@@ -1,5 +1,23 @@
 # M3M3-Studios
-Kevin Zhu, Akshay Karthik, Alex Booth, Heena Patel, Kevin Nguyen
+Kevin Zhu
+903112781
+kzhu48@gatech.edu
+
+Akshay Karthik
+903212846
+akarthik3@gatech.edu
+
+Alex Booth
+903115111
+alexbooth@gatech.edu
+
+Heena Patel
+903128265
+hpatel328@gatech.edu
+
+Kevin Nguyen
+903128265
+knguyen90@gatech.edu
 
 This is the Final Project Submission for Meme Quest 2019.
 WASD to move around and space to jump for keyboard controls. Arrow keys to move the camera and ESC to pause. F to pick up special objects.
@@ -13,8 +31,7 @@ We have a full game loop with start menu, pause menu, retry menu for game overs,
 
 
 Precursors to Fun Gameplay:
-The player is able to interact with buttons and enemies to solve puzzles and advance through the levels. The player has to watch out to not let the enemies knock him off the level and to his doom.
-
+The player is able to interact with buttons and enemies to solve puzzles and advance through the levels. The player has to watch out to not let the enemies knock him off the level and to his death.
 
 3D Character/Vehicle with Real-Time Control:
 While a model and animations were gathered from a third party source, the animation controller, input controls, and blending were implemented and customized by us to provide better handling of the provided model and animations. We have implemented both keyboard and controller support for the animations.
@@ -28,14 +45,36 @@ You can find the animations in Assets/Animations/Environment and the scripts in 
 
 
 Real-time NPC Steering Behaviors/Artificial Intelligence:
-Our game includes AI that will attempt to attack the player and try to knock them off the level and to their death. The AI will also switch between different states in response to the player's actions, such as fleeing when hurt and regrouping to attack. The Pepe and Shoe AI steers towards the player in the chase state. The DoodleBob AI interacts with the walls around the stage when it flees and attacks the player.
+Our game includes AI that will attempt to attack the player and try to knock them off the level and to their death. The AI will also switch between different states in response to the player's actions, such as fleeing when hurt and regrouping to attack. The Pepe and Shoe AI steers towards the player in the chase state. The DoodleBob AI interacts with the walls around the stage when it flees and attacks the player. The Pepe Boss AI also uses the pillars to strafe around the player and to hide from the player.
 You can find the Animations in Assets/Animations/Enemies and the scripts in Assets/Scripts/AI
 
 Polish:
 Our game contains a start menu and pause menu. The levels contain unique skyboxes and visual flair based on the meme the level is based off of. We have different sound effects for certain actions and activities.
 You can find the UI scripts in Assets/Scripts/UI
 
-The scenes used in the build are GameMenu, Level 0, ShoeBoss, Level 1, Level 1 Boss, Level 2, and Boss Testing. Other scenes in the project are used for debugging. To start playing the game, hit play in the GameMenu scene. The main algorithm-heavy scripts are the Camera scripts, CharacterControl, CustomCharacter, InputController, and all of the AI scripts, while other scripts create scaffolding for level sequence and more simple interactions between the player and the world.
+The scenes used in the build are GameMenu, Level 0, ShoeBoss, Level 1, Level 1 Boss, Level 2, and Boss Testing. Other scenes in the project are used for debugging. To start playing the game, hit play in the GameMenu scene. The main algorithm-heavy scripts are the Camera scripts, CharacterControl, CustomCharacter, InputController, ShoeAIScript, PepeBossScript, and DoodleBossScript, while other scripts create scaffolding for level sequence and more simple interactions between the player and the world.
+
+
+Technical Issues and Unresolved Bugs:
+Very rarely will the player sometimes be able to double jump infinitely after killing an enemy.
+The Pepe Boss will sometimes be stuck in midair while in his stunned animation.
+Placing a block inside another gameobject using the Place Block powerup will sometimes push the block back and give the player a ton of momentum.
+Jellyfish will sometimes die unintentionally when the player collides with them from below instead of knocking the player back.
+The player can sometimes gain a lot of upward momentum if the player presses the jump button at a precise moment after bouncing off an enemy or landing on a ledge.
+The player appears to sink into platforms that are moving upwards.
+Some parts of the central mountain in Level 2 is unintentionally scalable by the player by repeatedly jumping up the mountain, though it takes a bit of time. The player can also sometimes clip through the terrain if he attepts to do this.
+
+
+Who Did What:
+Kevin Nguyen: Handled all of the artwork and UI elements, created animations for the player character, implemented the dialog system and the powerup system. Was the primary bug-hunter/balancer along with Kevin Zhu.
+
+Kevin Zhu: Implemented Level 0 and Level 2 and developed the AI/Map for Shoe Boss and Pepe Boss fights. Developed the mechanics for the player and was the primary bug-hunter/balancer along with Kevin Nguyen.
+
+Alex Booth: Implemented the AI/Map for the Doodlebob fight and designed the jellyfish AI, shoe minion AI, and pepe minion AI.
+
+Heena Patel: Implemented Level 1 and designed the moving platforms.
+
+Akshay Karthik: Designed the double-button puzzles for Level 2 and aided with Level 2 implementation.
 
 
 Attributions:
@@ -56,4 +95,6 @@ Level 0 Music - Old School RuneScape ~ Harmony (https://www.youtube.com/watch?v=
 
 Boss Music - Phonson (https://opengameart.org/content/boss-fight)
 
-Level 1 Music - Spongebob Battle for Bikini Bottom - Jellyfish Fields (https://www.youtube.com/watch?v=fz-Sstui9yc)
+Level 1 Music - Spongebob Battle for Bikini Bottom ~ Jellyfish Fields (https://www.youtube.com/watch?v=fz-Sstui9yc)
+
+Level 2 Music - Soul and Mind - E's Jammy Jam (https://www.youtube.com/watch?v=NGazythwAkU)

@@ -23,7 +23,8 @@ public class DoodlebobScript : MonoBehaviour
     private GameObject rightArm;
     AudioSource[] soundEffects = new AudioSource[2];
     AudioSource meHoyMinoy1, meHoyMinoy2;
-    private GameObject levelDoor; 
+    private GameObject levelDoor;
+    private GameObject doodlePaper;
 
 
     // Start is called before the first frame update
@@ -35,12 +36,14 @@ public class DoodlebobScript : MonoBehaviour
         soundEffects = GetComponents<AudioSource>();
         meHoyMinoy1 = soundEffects[0];
         meHoyMinoy2 = soundEffects[1];
+        doodlePaper = GameObject.Find("DoodleBobPaper");
+        doodlePaper.SetActive(false);
         levelDoor = GameObject.Find("Level Door");
         levelDoor.SetActive(false);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         switch (currState)
         {
@@ -59,7 +62,7 @@ public class DoodlebobScript : MonoBehaviour
             case DoodlebobState.Moving:
                 if (transform.position.z > destPos.z)
                 {
-                    transform.position -= new Vector3(0, 0, .5f);
+                    transform.position -= new Vector3(0, 0, .3f);
                 }
                 else
                 {
@@ -78,6 +81,7 @@ public class DoodlebobScript : MonoBehaviour
                 //levelDoor.SetActive(true);
                 Destroy(GameObject.Find("Kill Wall"));
                 Destroy(gameObject);
+                doodlePaper.SetActive(true);
                 break;
 
             default:
