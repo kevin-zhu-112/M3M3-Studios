@@ -22,7 +22,7 @@ public class jellyfishScript : MonoBehaviour
             soundEffect.Play();
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("hit");
+
         }
     }
 
