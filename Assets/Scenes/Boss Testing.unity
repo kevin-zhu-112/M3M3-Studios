@@ -1972,7 +1972,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
       value: Watch out, he's a tough one! Bait out his attack and strike him when
-        he's down!
+        he's recovering!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf1bdf8c0be86cb47b741a4d5253c197, type: 3}
@@ -5581,3 +5581,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c166e8f7a56ca484cb3d6c24fc4debc8, type: 3}
+--- !u!1001 &3239056061001511853
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8938598744856087134, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_Name
+      value: PowerupManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267661329250796392, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0cce19c19ee1ea4d9b6b42e00f1ace2, type: 3}
